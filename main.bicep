@@ -1,5 +1,5 @@
 param storagePrefix string = 'replace_me'
-param storageName string = '${storagePrefix}${uniqueString(resourceGroup().id)}'
+param storageName string = '${storagePrefix}$-gh-{uniqueString(resourceGroup().id)}'
 param location string = resourceGroup().location
 
 resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
